@@ -8,6 +8,12 @@ pipeline {
             }
         }
 
+        stage('Build') {
+            steps {
+                sh 'docker compose build --up -d'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 echo 'Deployment step (Kubernetes, Docker Compose, etc.)'
