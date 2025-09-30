@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'docker compose build --up -d'
+                sh 'docker compose build -d --no-cache'
             }
         }
 
