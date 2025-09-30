@@ -8,15 +8,9 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                sh 'docker compose build -d --no-cache'
-            }
-        }
-
         stage('Deploy') {
             steps {
-                echo 'Deployment step (Kubernetes, Docker Compose, etc.)'
+                sh 'docker compose up -d'
             }
         }
     }
