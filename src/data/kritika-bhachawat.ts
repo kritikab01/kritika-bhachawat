@@ -1,7 +1,7 @@
 import { Award, BarChart3, Brain, Briefcase, Code, Cpu, Database, Download, Github, GraduationCap, Instagram, LineChart, Linkedin, Mail, MapPin, TrendingUp, Twitter, Users } from "lucide-react";
 
 const basicInfo = {
-    name: "Kritika Bhachawat 01",
+    name: "Kritika Bhachawat",
     title: "Data Analytics & Business Intelligence Professional",
     subtitle: "Transforming Data into Actionable Insights",
 }
