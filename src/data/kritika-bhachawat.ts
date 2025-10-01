@@ -181,26 +181,26 @@ const contactInfo = [
     {
         icon: Mail,
         label: "Email",
-        value: "kritika.bhachawat@example.com",
-        link: "mailto:kritika.bhachawat@example.com",
+        value: "kritikabhachawat@gmail.com",
+        link: "mailto:kritikabhachawat@gmail.com",
     },
     {
         icon: MapPin,
         label: "Location",
-        value: "New Delhi, India",
+        value: "Rajasthan, India",
         link: null,
     },
     {
         icon: Linkedin,
         label: "LinkedIn",
         value: "kritika-bhachawat",
-        link: "https://www.linkedin.com/in/kritika-bhachawat",
+        link: "https://www.linkedin.com/in/kritika-bhachawat-jain-4740ba194/",
     },
     {
         icon: Github,
         label: "GitHub",
         value: "kritika-bhachawat",
-        link: "https://github.com/kritika-bhachawat",
+        link: "https://github.com/kritikab01",
     },
 ];
 export { basicInfo, education, experience, socialMedia, about, projects, skillCategories, contactInfo };
