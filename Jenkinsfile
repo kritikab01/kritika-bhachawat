@@ -2,12 +2,11 @@ pipeline {
     agent any
 
     environment {
-        PROJECT_NAME = 'kritikabhachawatme'
+        PROJECT_NAME = "kritikabhachawatme"
     }
 
     options {
-        timestamps()
-        ansiColor('xterm')
+        timestamps()   // Keeps log timestamps
     }
 
     stages {
@@ -25,7 +24,7 @@ pipeline {
             }
         }
 
-       stage('Cleanup Old Containers') {
+        stage('Cleanup Old Containers') {
             steps {
                 sh 'docker compose down --remove-orphans || true'
                 sh "docker container prune -f || true"
