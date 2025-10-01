@@ -4,3 +4,10 @@ services:
     build: .
     ports:
       - "5101:80"
+    container_name: kritikabhachawat
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+      timeout: 5s
