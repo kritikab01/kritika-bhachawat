@@ -2,14 +2,20 @@ pipeline {
     agent any
 
     environment {
-        PROJECT_NAME = "kritikabhachawatme"
+        PROJECT_NAME = 'kritikabhachawatme'
+    }
+
+    options {
+        timestamps()
+        ansiColor('xterm')
     }
 
     stages {
-        stage('Docker Version') {
+        stage('Docker Info') {
             steps {
                 sh 'docker --version'
                 sh 'docker compose version || docker-compose --version'
+                sh 'docker system df'
             }
         }
 
@@ -19,32 +25,32 @@ pipeline {
             }
         }
 
-        stage('Cleanup Old Containers') {
+       stage('Cleanup Old Containers') {
             steps {
-                // Stop and remove old containers, but don’t fail if none exist
                 sh 'docker compose down --remove-orphans || true'
-                sh "docker image prune -f || true"
+                sh "docker container prune -f || true"
+                sh "docker volume prune -f || true"
             }
         }
 
-        stage('Build with Cache') {
+        stage('Build') {
             steps {
-                // Reuse cached layers to speed up builds
-                sh 'docker compose build --pull'
+                sh 'docker compose build --pull --parallel'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'docker compose up -d'
+                sh 'docker compose up -d --remove-orphans'
             }
         }
     }
 
     post {
         always {
-            echo "Pipeline finished. Cleaning up dangling images..."
-            sh 'docker image prune -f || true'
+            echo "🧹 Cleaning up dangling images and unused build cache..."
+            sh 'docker image prune -af || true'
+            sh 'docker builder prune -af || true'
         }
         success {
             echo "✅ Deployment successful: $PROJECT_NAME"
