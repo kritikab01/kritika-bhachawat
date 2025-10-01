@@ -31,7 +31,7 @@ const About = () => {
             <div className="animate-slide-in-left">
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <img src="/profile.png"
+                <img src="/images/profile.png"
                   alt="Kritika Bhachawat"
                   className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
