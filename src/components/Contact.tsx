@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { contactInfo } from "@/data/kritika-bhachawat";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -22,33 +23,6 @@ const Contact = () => {
     });
     setFormData({ name: "", email: "", message: "" });
   };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "kritika.bhachawat@example.com",
-      link: "mailto:kritika.bhachawat@example.com",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "New Delhi, India",
-      link: null,
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "kritika-bhachawat",
-      link: "https://www.linkedin.com/in/kritika-bhachawat",
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "kritika-bhachawat",
-      link: "https://github.com/kritika-bhachawat",
-    },
-  ];
 
   return (
     <section id="contact" className="py-20 bg-secondary/30">

@@ -1,51 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Database, LineChart, Code, Cpu, Brain, Users } from "lucide-react";
+import { skillCategories } from "@/data/kritika-bhachawat";
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      icon: LineChart,
-      title: "Data Analytics",
-      skills: ["Power BI", "DAX", "Data Visualization", "KPI Dashboards", "Business Intelligence"],
-      level: 95,
-      color: "bg-blue-500",
-    },
-    {
-      icon: Database,
-      title: "Data Management",
-      skills: ["SQL", "Data Modeling", "ETL Processes", "Database Design", "Data Quality"],
-      level: 85,
-      color: "bg-purple-500",
-    },
-    {
-      icon: Code,
-      title: "Programming",
-      skills: ["Python", "MATLAB", "Arduino", "MIT App Inventor", "C++"],
-      level: 80,
-      color: "bg-green-500",
-    },
-    {
-      icon: Cpu,
-      title: "IoT & Embedded",
-      skills: ["Arduino", "ESP32", "Diptrace", "Embedded Systems", "Wireless Communication"],
-      level: 75,
-      color: "bg-orange-500",
-    },
-    {
-      icon: Brain,
-      title: "Analytical Skills",
-      skills: ["Market Research", "Statistical Analysis", "Problem Solving", "Critical Thinking"],
-      level: 90,
-      color: "bg-pink-500",
-    },
-    {
-      icon: Users,
-      title: "Leadership",
-      skills: ["Team Management", "Financial Planning", "Event Coordination", "Strategic Planning"],
-      level: 85,
-      color: "bg-cyan-500",
-    },
-  ];
 
   return (
     <section id="skills" className="py-20 bg-background">

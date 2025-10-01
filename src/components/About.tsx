@@ -1,23 +1,7 @@
+import { about } from "@/data/kritika-bhachawat";
 import { Award, Briefcase, GraduationCap } from "lucide-react";
 
 const About = () => {
-  const highlights = [
-    {
-      icon: GraduationCap,
-      title: "Education",
-      description: "PGDM in Business Data Analytics from FORE School of Management",
-    },
-    {
-      icon: Briefcase,
-      title: "Experience",
-      description: "Power BI Development, Data Analytics & Marketing Strategy",
-    },
-    {
-      icon: Award,
-      title: "Certifications",
-      description: "Google Data Analytics, Power BI, SQL & Python",
-    },
-  ];
 
   return (
     <section id="about" className="py-20 bg-secondary/30">
@@ -39,16 +23,11 @@ const About = () => {
             </div>
 
             <div className="space-y-6 animate-slide-in-right">
-              <p className="text-lg leading-relaxed" style={{ color: "hsl(var(--text-body))" }}>
-                I'm a passionate data analytics professional with expertise in transforming complex datasets into actionable business insights. With a strong foundation in Power BI, DAX, and data visualization, I've successfully delivered impactful KPI dashboards and analytical solutions that drive data-driven decision-making.
+              <p className="text-lg leading-relaxed whitespace-pre-line" style={{ color: "hsl(var(--text-body))" }}>
+                {about.description}
               </p>
-
-              <p className="text-lg leading-relaxed" style={{ color: "hsl(var(--text-body))" }}>
-                Beyond analytics, I bring hands-on experience in IoT automation, embedded systems, and innovative project development. My leadership roles in finance coordination and campus engagement have honed my abilities in team collaboration, strategic planning, and problem-solving.
-              </p>
-
               <div className="grid gap-4 pt-6">
-                {highlights.map((highlight, index) => (
+                {about?.highlights.map((highlight, index) => (
                   <div
                     key={index}
                     className="flex items-start gap-4 p-4 rounded-xl bg-card hover:shadow-lg transition-all duration-300 hover:scale-102"

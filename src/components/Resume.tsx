@@ -1,44 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { education, experience } from "@/data/kritika-bhachawat";
 import { Download, ExternalLink, Briefcase, GraduationCap } from "lucide-react";
 
 const Resume = () => {
-  const education = [
-    {
-      degree: "PGDM (Business Data Analytics)",
-      institution: "FORE School of Management",
-      year: "2025 - 2027",
-      result: "Pursuing",
-    },
-    {
-      degree: "B.E. (Computer Science Engineering)",
-      institution: "M.B.M. University",
-      year: "2020 - 2024",
-      result: "88.00%",
-    },
-  ];
-
-  const experience = [
-    {
-      role: "Marketing Intern",
-      company: "SUPYAR®",
-      duration: "July 2025 - August 2025",
-      description: "Conducted market research covering 500+ customers and designed marketing plans that lifted brand recall by 35% among urban youth.",
-    },
-    {
-      role: "Power BI Intern",
-      company: "Celebal Technologies",
-      duration: "June 2023 - August 2023",
-      description: "Analyzed 100,000+ sales records, created dashboards achieving 25% improvement in data accessibility and 10% increase in sales insights.",
-    },
-    {
-      role: "Embedded Systems & Robotics Trainee",
-      company: "M.B.M. University",
-      duration: "June 2022 - July 2022",
-      description: "Built TIC-TAC-TOE robotic arm with Arduino and ESP32, enhancing IoT and embedded systems expertise.",
-    },
-  ];
-
   return (
     <section id="resume" className="py-20 bg-background">
       <div className="container mx-auto px-6">
